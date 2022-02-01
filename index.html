@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+   <meta charset="UTF-8">
+   <title>CALCULADORA</title>
+   <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+   <table id="calculadora" class="centre">
+      <tr>
+         <td colspan="4">
+            <input type="text" id="valor_numero" maxlength="20" value="0" class="cajita_valor" readonly="true">
+         </td>
+      </tr>
+      <tr>
+         <td colspan="2">
+            <input type="Button" id="potencia" value="exp" class="boton_largo funcion" onclick="operar(5)">
+         </td>
+         <td>
+            <input type="Button" id="Dividir" value="/" class="boton funcion" onclick="operar(4)">
+         </td>
+         <td>
+            <input type="Button" id="Multiplicar" value="x" class="boton funcion" onclick="operar(3)">
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <input type="Button" id="7" value="7" class="boton" onclick="darNumero('7')">
+         </td>
+         <td>
+            <input type="Button" id="8" value="8" class="boton" onclick="darNumero('8')">
+         </td>
+         <td>
+            <input type="Button" id="9" value="9" class="boton" onclick="darNumero('9')">
+         </td>
+         <td>
+            <input type="Button" id="Restar" value="-" class="boton funcion" onclick="operar(2)">
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <input type=" Button" id="4" value="4" class="boton" onclick="darNumero('4')">
+         </td>
+         <td>
+            <input type="Button" id="5" value="5" class="boton" onclick="darNumero('5')">
+         </td>
+         <td>
+            <input type="Button" id="6" value="6" class="boton" onclick="darNumero('6')">
+         </td>
+         <td>
+            <input type="Button" id="Sumar" value="+" class="boton funcion" onclick="operar(1)">
+         </td>
+      </tr>
+      <tr>
+         <td>
+            <input type="Button" id="1" value="1" class="boton" onclick="darNumero('1')">
+         </td>
+         <td>
+            <input type="Button" id="2" value="2" class="boton" onclick="darNumero('2')">
+         </td>
+         <td>
+            <input type="Button" id="3" value="3" class="boton" onclick="darNumero('3')">
+         </td>
+         <td>
+            <input type="Button" id="igual" value="=" class="boton funcion" onclick="esIgual()">
+         </td>
+      </tr>
+      <tr>
+         <td colspan="2">
+            <input type="Button" id="0" value="0" class="boton_largo" onclick="darNumero('0')">
+         </td>
+         <td>
+            <input type="Button" id="," value="," class="boton" onclick="darComa()">
+         </td>
+         <td>
+            <input type="Button" id="C" value="C" class="boton funcion" onclick="darC()">
+         </td>
+      </tr>
+   </table><br><br>
+
+<!--Juego-->
+<div class="container" class="centre">
+<h1>Rock-Paper-Scissors</h1>
+<div class="wrapper">
+  <div class="message"></div>
+  <div class="player">
+    <button class="player-option option-rock" data-options="rock">
+      <div class="rock-wrapper">
+        <i class="far fa-hand-rock fa-7x"></i>
+      </div>
+      PIEDRA
+    </button>
+
+    <button class="player-option option-paper" data-options="paper">
+      <i class="far fa-hand-paper fa-7x"></i>
+      PAPEL
+    </button>
+    <button class="player-option option-scissor" data-options="scissors">
+      <i class="far fa-hand-scissors fa-7x"></i>
+      TIJERA
+    </button>
+  </div>
+  <div class="computer">
+    <div class="computer-option"></div>
+  </div>
+</div>
+<button id="next-round">Next Round</button>
+</div>
+
+</body>
+<script src="./main.js"></script>
+</html>
